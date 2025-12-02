@@ -38,7 +38,7 @@ void forward(){
 
 void turn1(){ // R turn
   Motor.turnWheel(1, RIGHT, innerrpm1); // Check LR Status when Run
-  Motor.turnWheel(2, RIGHT, outerrpm1);
+  Motor.turnWheel(2, RIGHT, 0;
   delay(t3);
   Motor.turnWheel(1,0); 
   Motor.turnWheel(2,0);
@@ -54,7 +54,7 @@ void turn1(){ // R turn
 
 
 void turn2(){ // L turn
-  Motor.turnWheel(1, LEFT, innerrpm2); 
+  Motor.turnWheel(1, LEFT, 0); 
   Motor.turnWheel(2, LEFT, outerrpm2);
   delay(t3);
   Motor.turnWheel(1,0); 
