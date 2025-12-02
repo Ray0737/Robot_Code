@@ -1,6 +1,7 @@
 #include "src/Motor.h"
 #define DirectionPin 4
 #define BaudRate 115200
+// TASK: MOVE ON A STAR CIRCUMFURENCE TRACK
 
 int theta1 = 360;
 int theta2 = 72; // R
