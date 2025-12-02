@@ -51,8 +51,8 @@ void turn2(){ // L turn
 }
 
 void execute(){
+  delay(10000);
   for(int i=0; i < 5,i++){
-    delay(10000);
     forward();
     delay(5000);
     turn1();
@@ -65,6 +65,6 @@ void execute(){
 }
 
 void loop(){
- execute()
- while(1)
+ execute();
+ while(1);
 }
