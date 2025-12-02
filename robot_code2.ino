@@ -5,12 +5,12 @@
 
 int theta = 360;
 int t = 20000;
-int wheelr = 3; //C
-float innerr = 22.5; //C
-float outerr = 37.5; //C
+int wheelr = 3.5; //C
+float innerr = 21; //C
+float outerr = 37; //C
 
 int innerrpm = (theta*innerr*60000)/(3*t*360);
-int outerrpm = (theta*outterr*60000)/(3*t*360); 
+int outerrpm = (theta*outerr*60000)/(3*t*360); 
 
 void setup() {
   Serial.begin(115200);
@@ -18,9 +18,9 @@ void setup() {
   delay(10000); //Pre Launch
   Motor.turnWheel(1, LEFT, innerrpm);
   Motor.turnWheel(2, RIGHT, outerrpm);
-  delay(t);
-  Motor.turnWheel(1,0);
-  Motor.turnWheel(2,0); 
+  delay(t-1000);
+  Motor.turnWheel(1,LEFT,0);
+  Motor.turnWheel(2,RIGHT,0); 
 }
 
 void loop() {
