@@ -12,8 +12,8 @@ int t2 = 4000; // Forward Time
 int t3 = 7000; // Turning Time
 
 int wheelr = 3; // Custom
-float innerr = 22.5; // Custom (L)
-float outerr = 37.5; // Custom (R)
+float innerr = 22.5; 
+float outerr = 37.5; 
 
 int constantrpm = 30;
 int innerrpm1 = (theta2*innerr*60000)/(3*t2*360); // T1 apx 22.5
@@ -25,6 +25,8 @@ void setup() {
   Serial.begin(115200);
   Motor.begin(BaudRate, DirectionPin, &Serial2);  
 }
+
+// 1 = Left | 2 = Right
 
 void forward(){
   Motor.turnWheel(1,constantrpm); 
