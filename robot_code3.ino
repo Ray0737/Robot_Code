@@ -16,10 +16,10 @@ float innerr = 17.5; // (Distance between wheels to wheels)
 float outerr = 17.5; 
 
 int constantrpm = 30;
-int innerrpm1 = (theta2*innerr*60000)/(3*t2*360); // T1 apx 22.5
-int outerrpm1 = (theta2*outterr*60000)/(3*t2*360); // T1 apx 37.5
-int innerrpm2 = (theta3*innerr*60000)/(3*t3*360); // T2 apx 25.714
-int outerrpm2 = (theta3*outterr*60000)/(3*t3*360); // T2 apx 42.857
+int innerrpm1 = (theta2*innerr*60000)/(3*t2*360); // T1 
+int outerrpm1 = (theta2*outterr*60000)/(3*t2*360); // T1 
+int innerrpm2 = (theta3*innerr*60000)/(3*t3*360); // T2 
+int outerrpm2 = (theta3*outterr*60000)/(3*t3*360); // T2 
  
 void setup() {
   Serial.begin(115200);
