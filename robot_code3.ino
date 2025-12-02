@@ -74,13 +74,13 @@ void execute(){ // Main Function
   delay(10000);
   for(int i=0; i < 5,i++){
     forward();
-    delay(5000);
+    delay(3000);
     turn1();
-    delay(5000);
+    delay(3000);
     forward();
-    delay(5000);
+    delay(3000);
     turn2();
-    delay(5000);
+    delay(3000);
   }
 }
 
