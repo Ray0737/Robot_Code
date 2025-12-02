@@ -34,21 +34,39 @@ void forward(){
   Motor.turnWheel(2,0);
 }
 
-void turn1(){ // R turn
-  Motor.turnWheel(1, RIGHT, innerrpm1); // Check LR Status when Run
-  Motor.turnWheel(2, RIGHT, outerrpm1);
+// void turn1(){ // R turn
+//   Motor.turnWheel(1, RIGHT, innerrpm1); // Check LR Status when Run
+//   Motor.turnWheel(2, RIGHT, outerrpm1);
+//   delay(t3);
+//   Motor.turnWheel(1,0); 
+//   Motor.turnWheel(2,0);
+// }
+
+void turn1(){ // R turn RECOMMENDED
+  Motor.turnWheel(1, RIGHT, 34); // Check LR Status when Run
+  Motor.turnWheel(2, RIGHT, 0);
   delay(t3);
   Motor.turnWheel(1,0); 
   Motor.turnWheel(2,0);
 }
 
-void turn2(){ // L turn
-  Motor.turnWheel(1, LEFT, innerrpm2); 
-  Motor.turnWheel(2, LEFT, outerrpm2);
+
+// void turn2(){ // L turn
+//   Motor.turnWheel(1, LEFT, innerrpm2); 
+//   Motor.turnWheel(2, LEFT, outerrpm2);
+//   delay(t3);
+//   Motor.turnWheel(1,0); 
+//   Motor.turnWheel(2,0);
+// }
+
+void turn2(){ // l turn RECOMMENDED
+  Motor.turnWheel(1, LEFT, 0); // Check LR Status when Run
+  Motor.turnWheel(2, LEFT, 69);
   delay(t3);
   Motor.turnWheel(1,0); 
   Motor.turnWheel(2,0);
 }
+
 
 void execute(){ // Main Function
   delay(10000);
