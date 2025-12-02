@@ -7,13 +7,13 @@ int theta1 = 360;
 int theta2 = 72; // Right Turn
 int theta3 = 144; // Left Turn
 
-int t1 = 20000;
+int t1 = 5000;
 int t2 = 4000; // Forward Time
 int t3 = 7000; // Turning Time
 
 int wheelr = 3; // Custom
-float innerr = 22.5; // Custom
-float outerr = 37.5; // Custom
+float innerr = 22.5; // Custom (L)
+float outerr = 37.5; // Custom (R)
 
 int constantrpm = 30;
 int innerrpm1 = (theta2*innerr*60000)/(3*t2*360); // T1 apx 22.5
@@ -29,14 +29,14 @@ void setup() {
 void forward(){
   Motor.turnWheel(1,constantrpm); 
   Motor.turnWheel(2,constantrpm);
-  delay(t2);
+  delay(t1);
   Motor.turnWheel(1,0); 
   Motor.turnWheel(2,0);
 }
 
 void turn1(){ // R turn
-  Motor.turnWheel(1, RIGHT, innerrpm1); 
-  Motor.turnWheel(2, LEFT, outerrpm1);
+  Motor.turnWheel(1, RIGHT, innerrpm1); // Check LR Status when Run
+  Motor.turnWheel(2, RIGHT, outerrpm1);
   delay(t3);
   Motor.turnWheel(1,0); 
   Motor.turnWheel(2,0);
@@ -44,7 +44,7 @@ void turn1(){ // R turn
 
 void turn2(){ // L turn
   Motor.turnWheel(1, LEFT, innerrpm2); 
-  Motor.turnWheel(2, RIGHT, outerrpm2);
+  Motor.turnWheel(2, LEFT, outerrpm2);
   delay(t3);
   Motor.turnWheel(1,0); 
   Motor.turnWheel(2,0);
