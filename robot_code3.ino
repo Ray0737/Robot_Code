@@ -43,7 +43,7 @@ void forward(){
 // }
 
 void turn1(){ // R turn RECOMMENDED
-  Motor.turnWheel(1, RIGHT, 34); // Check LR Status when Run
+  Motor.turnWheel(1, RIGHT, 17); // Check LR Status when Run
   Motor.turnWheel(2, RIGHT, 0);
   delay(t3);
   Motor.turnWheel(1,0); 
@@ -61,7 +61,7 @@ void turn1(){ // R turn RECOMMENDED
 
 void turn2(){ // l turn RECOMMENDED
   Motor.turnWheel(1, LEFT, 0); // Check LR Status when Run
-  Motor.turnWheel(2, LEFT, 69);
+  Motor.turnWheel(2, LEFT, 34);
   delay(t3);
   Motor.turnWheel(1,0); 
   Motor.turnWheel(2,0);
