@@ -8,18 +8,18 @@ int theta2 = 72; // Right Turn
 int theta3 = 144; // Left Turn
 
 int t1 = 20000;
-int t2 = 3000; // Forward Time
-int t3 = 1200; // Turning Time
+int t2 = 4000; // Forward Time
+int t3 = 7000; // Turning Time
 
 int wheelr = 3; // Custom
 float innerr = 22.5; // Custom
 float outerr = 37.5; // Custom
 
 int constantrpm = 30;
-int innerrpm1 = (theta2*innerr*60000)/(3*t2*360); // T1
-int outerrpm1 = (theta2*outterr*60000)/(3*t2*360); // T1
-int innerrpm2 = (theta3*innerr*60000)/(3*t3*360); // T2
-int outerrpm2 = (theta3*outterr*60000)/(3*t3*360); // T2
+int innerrpm1 = (theta2*innerr*60000)/(3*t2*360); // T1 apx 22.5
+int outerrpm1 = (theta2*outterr*60000)/(3*t2*360); // T1 apx 37.5
+int innerrpm2 = (theta3*innerr*60000)/(3*t3*360); // T2 apx 25.714
+int outerrpm2 = (theta3*outterr*60000)/(3*t3*360); // T2 apx 42.857
  
 void setup() {
   Serial.begin(115200);
