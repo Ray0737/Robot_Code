@@ -4,16 +4,16 @@
 // TASK: MOVE ON A STAR CIRCUMFURENCE TRACK
 
 int theta1 = 360;
-int theta2 = 72; // R
-int theta3 = 144; // L
+int theta2 = 72; // Right Turn
+int theta3 = 144; // Left Turn
 
 int t1 = 20000;
-int t2 = 3000; // S
-int t3 = 1200; // T
+int t2 = 3000; // Forward Time
+int t3 = 1200; // Turning Time
 
-int wheelr = 3; //C
-float innerr = 22.5; //C
-float outerr = 37.5; //C
+int wheelr = 3; // Custom
+float innerr = 22.5; // Custom
+float outerr = 37.5; // Custom
 
 int constantrpm = 30;
 int innerrpm1 = (theta2*innerr*60000)/(3*t2*360); // T1
@@ -50,7 +50,7 @@ void turn2(){ // L turn
   Motor.turnWheel(2,0);
 }
 
-void execute(){
+void execute(){ // Main Function
   delay(10000);
   for(int i=0; i < 5,i++){
     forward();
@@ -64,7 +64,7 @@ void execute(){
   }
 }
 
-void loop(){
+void loop(){ 
  execute();
  while(1);
 }
