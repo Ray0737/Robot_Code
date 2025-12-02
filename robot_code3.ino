@@ -12,8 +12,8 @@ int t2 = 4000; // Forward Time
 int t3 = 7000; // Turning Time
 
 int wheelr = 3; // Custom
-float innerr = 22.5; 
-float outerr = 37.5; 
+float innerr = 17.5; // (Distance between wheels to wheels)
+float outerr = 17.5; 
 
 int constantrpm = 30;
 int innerrpm1 = (theta2*innerr*60000)/(3*t2*360); // T1 apx 22.5
@@ -36,38 +36,38 @@ void forward(){
   Motor.turnWheel(2,0);
 }
 
-// void turn1(){ // R turn
-//   Motor.turnWheel(1, RIGHT, innerrpm1); // Check LR Status when Run
-//   Motor.turnWheel(2, RIGHT, outerrpm1);
-//   delay(t3);
-//   Motor.turnWheel(1,0); 
-//   Motor.turnWheel(2,0);
-// }
-
-void turn1(){ // R turn RECOMMENDED
-  Motor.turnWheel(1, RIGHT, 17); // Check LR Status when Run
-  Motor.turnWheel(2, RIGHT, 0);
+void turn1(){ // R turn
+  Motor.turnWheel(1, RIGHT, innerrpm1); // Check LR Status when Run
+  Motor.turnWheel(2, RIGHT, outerrpm1);
   delay(t3);
   Motor.turnWheel(1,0); 
   Motor.turnWheel(2,0);
 }
 
-
-// void turn2(){ // L turn
-//   Motor.turnWheel(1, LEFT, innerrpm2); 
-//   Motor.turnWheel(2, LEFT, outerrpm2);
+// void turn1(){ // R turn RECOMMENDED
+//   Motor.turnWheel(1, RIGHT, 17); // Check LR Status when Run
+//   Motor.turnWheel(2, RIGHT, 0);
 //   delay(t3);
 //   Motor.turnWheel(1,0); 
 //   Motor.turnWheel(2,0);
 // }
 
-void turn2(){ // l turn RECOMMENDED
-  Motor.turnWheel(1, LEFT, 0); // Check LR Status when Run
-  Motor.turnWheel(2, LEFT, 34);
+
+void turn2(){ // L turn
+  Motor.turnWheel(1, LEFT, innerrpm2); 
+  Motor.turnWheel(2, LEFT, outerrpm2);
   delay(t3);
   Motor.turnWheel(1,0); 
   Motor.turnWheel(2,0);
 }
+
+// void turn2(){ // l turn RECOMMENDED
+//   Motor.turnWheel(1, LEFT, 0); // Check LR Status when Run
+//   Motor.turnWheel(2, LEFT, 34);
+//   delay(t3);
+//   Motor.turnWheel(1,0); 
+//   Motor.turnWheel(2,0);
+// }
 
 
 void execute(){ // Main Function
