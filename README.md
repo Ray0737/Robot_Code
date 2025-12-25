@@ -16,5 +16,6 @@ This repository is dedicated to storing all **classwork and homework** completed
 | **File 3** | Robot Star Movement |
 | **Latest Edit** | November 29, 2025 |
 
+## ⚠️ Deployment Note:
 
-
+To run the car please download the mortor library file first or make sure the IDE file is in the same source.
