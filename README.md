@@ -14,7 +14,6 @@ This repository is dedicated to storing all **classwork and homework** completed
 | **File 1** | C++ Exercise |
 | **File 2** | Robot Circular Movement |
 | **File 3** | Robot Star Movement |
-| **Latest Edit** | November 29, 2025 |
 
 ## ⚠️ Deployment Note:
 
