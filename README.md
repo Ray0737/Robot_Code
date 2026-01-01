@@ -2,7 +2,7 @@
 
 ## Project Details:
 
-This repository is dedicated to storing all **classwork and homework** completed during M.4 Semester 2. | NOTED: The curriculum for this subject is designed by Insititude of Field Robotics (FIBO) KMUTT.
+This repository is dedicated to storing all **classwork and homework** completed during M.4 Semester 2. | NOTED: The curriculum for this subject is designed by Insititude of Field Robotics (FIBO), KMUTT.
 
 ---
 
