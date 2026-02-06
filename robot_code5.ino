@@ -26,91 +26,103 @@ void stop() {
 }
 
 void execute() {
-  // 1. Forward 46-47 CM 
-  Motor.turnWheel(1, LEFT, 47 * rpm_unit);
-  Motor.turnWheel(2, RIGHT, 47 * rpm_unit);
-  delay(t); stop();
 
-  Motor.turnWheel(1, RIGHT, 3 * rpm_unit);
-  Motor.turnWheel(2, LEFT, 3 * rpm_unit);
-  delay(t); stop();
+  // // 1. FORWARD 47
+  // Motor.turnWheel(1, LEFT, 47 * rpm_unit);
+  // Motor.turnWheel(2, RIGHT, 47 * rpm_unit);
+  // delay(t); stop();
 
-  // 2. Rotate back 90 deg Right (Left wheel moves BACK, right still) 
-  // Distance = (2 * PI * track) * (90/360)
-  float dist90 = (2.0 * PI_VAL * track) * 0.25;
-  Motor.turnWheel(1, RIGHT, dist90 * rpm_unit);
-  Motor.turnWheel(2, RIGHT, 0);
-  delay(t); stop();
+  // delay(5000); // CHECK POINT BOX 1
 
-  // 3. Back out 44 cm 
-  Motor.turnWheel(1, RIGHT, 44 * rpm_unit);
-  Motor.turnWheel(2, LEFT, 44 * rpm_unit);
-  delay(t); stop();
+  // Motor.turnWheel(1, RIGHT, 8 * rpm_unit);
+  // Motor.turnWheel(2, LEFT, 8 * rpm_unit);
+  // delay(t); stop();
 
-  // 4. Move forward to next parking 
-  Motor.turnWheel(1, LEFT, 44.5 * rpm_unit);
-  Motor.turnWheel(2, RIGHT, 44.5 * rpm_unit);
-  delay(t); stop();
+  // // 2. ROTATION 90DG BACK RIGHT
+  // // Distance = (2 * PI * track) * (90/360)
+  // float dist90 = (2.0 * PI_VAL * track) * 0.25;
+  // Motor.turnWheel(1, RIGHT, dist90 * rpm_unit);
+  // Motor.turnWheel(2, RIGHT, 0);
+  // delay(t); stop();
 
-  // 5. 90 deg Left turn 
-  Motor.turnWheel(1, LEFT, dist90 * rpm_unit);
-  Motor.turnWheel(2, RIGHT,0);
-  delay(t); stop();
+  // // 3. BACKWARD 44
+  // Motor.turnWheel(1, RIGHT, 44 * rpm_unit);
+  // Motor.turnWheel(2, LEFT, 44 * rpm_unit);
+  // delay(t); stop();
 
-  // 6. Forward 21cm 
-  Motor.turnWheel(1, LEFT, 21 * rpm_unit);
-  Motor.turnWheel(2, RIGHT, 21 * rpm_unit);
-  delay(t); stop();
+  // delay(5000); // CHECK POINT BOX 2
 
-  Motor.turnWheel(1, LEFT, 4 * rpm_unit);
-  Motor.turnWheel(2, RIGHT, 4 * rpm_unit);
-  delay(t); stop();
+  // // 4. FORWARD 44
+  // Motor.turnWheel(1, LEFT, 44 * rpm_unit);
+  // Motor.turnWheel(2, RIGHT, 44 * rpm_unit);
+  // delay(t); stop();
+
+  // // 5. ROTATION 90DG RIGHT TURN
+  // Motor.turnWheel(1, LEFT, dist90 * rpm_unit);
+  // Motor.turnWheel(2, RIGHT,0);
+  // delay(t); stop();
+
+  // // 6. FORWARD 9
+  // Motor.turnWheel(1, LEFT, 5 * rpm_unit);
+  // Motor.turnWheel(2, RIGHT, 5 * rpm_unit);
+  // delay(t); stop();
+
+  // delay(5000); // CHECK POINT BOX 3
+
+  // // 7. FORWARD 21
+  // Motor.turnWheel(1, LEFT, 24 * rpm_unit);
+  // Motor.turnWheel(2, RIGHT, 24 * rpm_unit);
+  // delay(t); stop();
+
+  // delay(5000); // CHECK POINT BOX 4
   
-  // 6. Backward 30cm 
-  Motor.turnWheel(1, RIGHT, 30.5 * rpm_unit);
-  Motor.turnWheel(2, LEFT, 30.5 * rpm_unit);
-  delay(t); stop();
+  // // 8. BACKWARD 21
+  // Motor.turnWheel(1, RIGHT, 24 * rpm_unit);
+  // Motor.turnWheel(2, LEFT, 24 * rpm_unit);
+  // delay(t); stop();
 
-  // 7. 90 deg right turn 
-  Motor.turnWheel(1, LEFT, 0);
-  Motor.turnWheel(2, RIGHT,dist90 * rpm_unit);
-  delay(t); stop();
+  // delay(5000); // CHECK POINT BOX 5
+  
+  // // 9. BACKWARD 7
+  // Motor.turnWheel(1, RIGHT, 5 * rpm_unit);
+  // Motor.turnWheel(2, LEFT, 5 * rpm_unit);
+  // delay(t); stop();
 
+  // // 10. ROTATION 90DG LEFT TURN
+  // Motor.turnWheel(1, LEFT, 0);
+  // Motor.turnWheel(2, RIGHT, dist90 * rpm_unit);
+  // delay(t); stop();
 
-  Motor.turnWheel(1, LEFT, 37 * rpm_unit);
-  Motor.turnWheel(2, RIGHT, 37 * rpm_unit);
-  delay(t); stop();
+  // // 11. FORWARD 37
 
-  // 10. Rotate back (Right wheel moves BACK, left still)
-  Motor.turnWheel(1, LEFT, 0);
-  Motor.turnWheel(2, LEFT, dist90 * rpm_unit);
-  delay(t); stop();
+  // Motor.turnWheel(1, LEFT, 34 * rpm_unit);
+  // Motor.turnWheel(2, RIGHT, 34 * rpm_unit);
+  // delay(t); stop();
 
-  // // 11. Semicircle Dia 38 (Inner R = 11.5, Outer R = 26.5)
-  // // Half Circumference = PI * R
-  // float rpm_in = (PI_VAL * 11 / (2 * PI_VAL * wheelr)) * (60000.0 / 5000);
-  // float rpm_out = (PI_VAL * 30 / (2 * PI_VAL * wheelr)) * (60000.0 / 5000);
-  // Motor.turnWheel(1, LEFT, rpm_in);
-  // Motor.turnWheel(2, RIGHT, rpm_out);
-  // delay(5000); stop();
+  // // 10. Rotate back (Right wheel moves BACK, left still)
+  // Motor.turnWheel(1, LEFT, 0);
+  // Motor.turnWheel(2, LEFT, dist90 * rpm_unit);
+  // delay(t); stop();
 
-  // 11. Semicircle Dia 38 (Center R = 19, Track = 15)
-  float R_center = 19.0;
-  float R_in = R_center - (track / 2.0);  // Result: 11.5cm
-  float R_out = R_center + (track / 2.0); // Result: 26.5cm 
-  // Increased time for a slower, more controlled turn
-  int slow_turn_time = 8000; 
-  // The formula calculates the RPM needed to cover the arc distance in 8 seconds
-  float rpm_in = (R_in / (2.0 * wheelr)) * (60000.0 / slow_turn_time);
-  float rpm_out = (R_out / (2.0 * wheelr)) * (60000.0 / slow_turn_time);
-  Motor.turnWheel(1, LEFT, rpm_in);
-  Motor.turnWheel(2, RIGHT, rpm_out);
-  // Match the delay to the new turn_time
-  delay(slow_turn_time); stop();
+  // Motor.turnWheel(1, LEFT, 5 * rpm_unit);
+  // Motor.turnWheel(2, RIGHT, 5 * rpm_unit);
+  // delay(t); stop();
+  
+  int theta = 180;
+  int t = 10000;
+  int wheelr = 3.5; //C
+  float innerr = 11; //C
+  float outerr = 27; //C
 
-  // 12. Forward 20cm
-  Motor.turnWheel(1, LEFT, 20 * rpm_unit);
-  Motor.turnWheel(2, RIGHT, 20 * rpm_unit);
+  int innerrpm = (theta*innerr*60000)/(3*t*360);
+  int outerrpm = (theta*outerr*60000)/(3*t*360); 
+
+  Motor.turnWheel(1, LEFT, innerrpm);
+  Motor.turnWheel(2, RIGHT, outerrpm);
+  delay(t-1000); stop();
+
+  Motor.turnWheel(1, LEFT, 10 * rpm_unit);
+  Motor.turnWheel(2, RIGHT, 10 * rpm_unit);
   delay(t); stop();
 
   // 13. Left rotate 60 deg (Right wheel moves)
@@ -123,8 +135,13 @@ void execute() {
   Motor.turnWheel(1, LEFT, 20 * rpm_unit);
   Motor.turnWheel(2, RIGHT, 20 * rpm_unit);
   delay(t); stop();
+
+
+
+
 }
 
 void loop() {
   // Done
 }
+
