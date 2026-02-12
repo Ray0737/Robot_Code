@@ -1,52 +1,60 @@
-# Physics for Robotics: Kinematics & Movement Study 🤖
+# Class Work | Physics for Robotics
 
-This repository explores the intersection of **classical mechanics** and **robotics engineering**. It features a series of tasks designed to study robot navigation using fundamental physics principles, supported by full 3D design and technical schematics.
+[cite_start]This repository explores the intersection of **classical mechanics** and **robotics engineering**[cite: 19]. [cite_start]It features a series of tasks designed to study robot navigation using fundamental physics principles, developed for the "Physics in Robot Technology" course (ว30256)[cite: 14, 15].
 
+---
 
 ## 🎯 Project Objectives
-The goal of this project is to translate mathematical models into physical movement. We focus on:
-* **Linear Motion:** Calculating velocity and acceleration for precise distance control.
-* **Circular Motion:** Implementing angular velocity ($$\omega$$) and turning radii.
-* **Trigonometry Application:** Using sine and cosine functions to execute complex pathing.
+[cite_start]The goal of this project is to translate mathematical models into physical movement[cite: 19, 20]. We focus on:
+* [cite_start]**Linear Motion:** Calculating velocity and acceleration for precise distance control[cite: 37].
+* [cite_start]**Circular Motion:** Implementing angular velocity ($$\omega$$) and specific turning radii[cite: 39, 43].
+* [cite_start]**Trigonometry Application:** Using vector geometry to execute complex paths like star patterns[cite: 38].
+* [cite_start]**Mechanical Stability:** Designing 3D-printed extensions to house sensors securely and minimize vibration[cite: 30, 31].
 
 ---
 
 ## 📂 Repository Structure
 
-### 💻 Software (Arduino/C++)
-| File | Description | Key Physics Concept |
-| :--- | :--- | :--- |
-| `Task Exercise.ino` | Fundamental logic for hardware control. | Logic & Data Flow |
-| `Task Circular Motion.ino`| Driving the robot in a precise rounded path. | Centripetal Kinematics |
-| `Task Star Movement.ino` | Complex pathing involving sharp turns. | Vector Geometry |
-| `Task Final.ino` | Integrated movement logic. | Applied Kinematics |
+### 💻 Software Implementation (C++)
+* [cite_start]**`Task Exercise.ino`**: Fundamental logic for hardware control and calibration[cite: 27, 55].
+* [cite_start]**`Task Circular Motion.ino`**: Implements 180° turns using differential wheel speeds[cite: 75, 76].
+* [cite_start]**`Task Star Movement.ino`**: Executes precise turns to create multi-point geometric patterns[cite: 27].
+* [cite_start]**`Task Final.ino`**: The complete autonomous mission logic navigating through three distinct stations[cite: 40].
 
-### 🏗️ Engineering & Design
-* **3D Models (`.step`):** Includes the Car Body, Wheels, and Extension components for 3D printing or CAD assembly.
-* **Schematics (`.pdf`):** Detailed technical drawings for the assembly and wheel geometry.
-
+### 🏗️ Engineering & 3D Design
+* **`3D Car Body.step`**: The main chassis designed for a differential drive system.
+* [cite_start]**`3D Extension.step`**: A lightweight arm designed to house the servo and sensors with high stability[cite: 31, 33].
+* [cite_start]**`Schematic Assembly.pdf`**: Technical drawings and wheel geometry[cite: 27].
 
 ---
 
-## ⚙️ System Design
-The project is built around a **Differential Drive** robot platform:
-* **Dual Drive Wheels:** Independent motor control for differential steering.
-* **Caster Ball:** Low-friction support for 360-degree rotation.
-* **Path Precision:** Utilizing trigonometric calculations to minimize physical drift.
+## 🏁 Final Task: Mission Breakdown
+The `Task Final.ino` script executes a multi-stage navigation mission as follows:
+
+| Stage | Action | Physics Logic |
+| :--- | :--- | :--- |
+| **Start** | [cite_start]Move forward 47 cm to the readiness point[cite: 63]. | [cite_start]$RPM$ conversion based on 3.0 cm wheel radius[cite: 62]. |
+| **Station 1 & 2** | [cite_start]Reverse, rotate 90°, and move 44 cm to the checkpoint[cite: 65, 68]. | [cite_start]Center-point rotation based on 15.0 cm track width[cite: 62]. |
+| **Station 3** | [cite_start]Execute a 180° semi-circular turn[cite: 77]. | [cite_start]Differential speed ($\Delta RPM$) for inner vs. outer wheels[cite: 76]. |
+| **Final Goal** | [cite_start]Rotate 60° and move 29 cm to the finish star[cite: 84]. | [cite_start]Vector-based orientation adjustment[cite: 84]. |
+
+---
+
+## 🔢 Mathematical Foundation
+[cite_start]To ensure precise movement, the code utilizes the following kinematics equation to calculate the required motor speed[cite: 56, 57]:
+
+$${RPM}_{1cm} = \frac{1}{2\pi r} \times \frac{60000}{t}$$
+
+* [cite_start]**$r$ (Wheel Radius):** 3.0 cm [cite: 62]
+* [cite_start]**$t$ (Target Time):** 3000 ms [cite: 62]
+* [cite_start]**Result:** Approximately 10.6 RPM per 1 cm of travel[cite: 62].
 
 ---
 
 ## ⚠️ Setup & Deployment
-
-1.  **Library Dependency:** Ensure you have the required motor libraries installed in your IDE.
-2.  **File Location:** Keep the `.ino` files and their respective headers in the same folder.
-3.  **Hardware Check:** Verify motor pinouts against the **Schematic Assembly.pdf** before powering the system.
-
----
-
-## 🎓 Academic Context
-* **Level:** M.4 (Grade 10) Semester 2
-* **Curriculum Design:** Institute of Field Robotics (**FIBO**), KMUTT.
+1. **Library Dependency:** Ensure the motor controller library is included in the project directory.
+2. [cite_start]**Calibration:** If your physical wheel radius differs from 3.0 cm, update the `r` constant in the source code[cite: 62].
+3. [cite_start]**Environment:** Best operated on smooth surfaces to avoid accumulated error from wheel slip.
 
 ---
-*Created as part of a specialized study in robotics and applied physics.*
+[cite_start]*Curriculum designed by the Institute of Field Robotics (FIBO), KMUTT.* [cite: 16]
