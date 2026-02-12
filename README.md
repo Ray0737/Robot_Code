@@ -1,4 +1,4 @@
-# Physics for Robotics: Kinematics & Mission Navigation 🤖
+# Classwork | Physics for Robotics
 
 [cite_start]This repository explores the intersection of **classical mechanics** and **robotics engineering**[cite: 19]. [cite_start]It features a series of tasks designed to study robot navigation using fundamental physics principles, developed for the "Physics in Robot Technology" course (ว30256)[cite: 14, 15].
 
